@@ -2,7 +2,7 @@ function domCounter(selector){
 	var a = document.querySelectorAll(selector); 
 	var sum = 0;
 	for(var i=0; i<a.length;i++){
-		var temp = parseInt(a[i].innerHTML);
+		var temp = parseInt(a[i].innerHTML.replace(/[^\d\,\.]/,""));
 		if(!isNaN(temp)){
 			sum += temp;
 		}
